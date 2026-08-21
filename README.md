@@ -1,74 +1,89 @@
-# Customer Churn Prediction
+# 📊 Customer Churn Prediction
 
-An end-to-end machine learning system for predicting customer churn and identifying the key factors that influence customer retention.
+> End-to-end Explainable AI application for predicting telecom customer churn using XGBoost, SHAP, FastAPI, and Streamlit.
 
-## Project Overview
+![Dashboard](images/Dashboard.jpg)
 
-Customer churn is a major business problem for subscription-based companies such as telecommunications, SaaS, banking, and insurance providers.
+## Live Demo
+Coming Soon
 
-The objective of this project is to develop a machine learning solution that predicts whether a customer is likely to churn and provides interpretable insights into the factors influencing the prediction.
+## Tech Stack
 
-The project will progress from exploratory data analysis and machine learning to explainable AI, API development, and containerized deployment.
-
-## Objectives
-
-- Analyze customer behavior and churn patterns
-- Clean and preprocess customer data
-- Perform exploratory data analysis
-- Engineer meaningful features
-- Train and compare machine learning models
-- Optimize the selected model
-- Explain predictions using SHAP
-- Build a REST API using FastAPI
-- Develop an interactive application using Streamlit
-- Containerize the application using Docker
-
-## Technology Stack
-
-### Data Science
 - Python
-- Pandas
-- NumPy
+- Pandas & NumPy
 - Scikit-learn
 - XGBoost
-
-### Visualization
-- Matplotlib
-- Seaborn
-- Plotly
-
-### Explainable AI
 - SHAP
-
-### Deployment
 - FastAPI
-- Uvicorn
 - Streamlit
-- Docker
 
-### Development
-- Git
-- GitHub
-- Jupyter Notebook
+## Project Architecture
+
+Customer Data
+      ↓
+Streamlit Dashboard
+      ↓
+FastAPI REST API
+      ↓
+XGBoost Model
+      ↓
+SHAP Explainability
+      ↓
+Churn Prediction
+
+## Model Performance
+
+| Metric | Score |
+|--------|------:|
+| ROC-AUC | **0.8458** |
+| Recall | **78.88%** |
+| Precision | **52.49%** |
+| F1 Score | **0.6303** |
+
+## Dashboard
+
+![Prediction](images/Prediction.jpg)
+
+## Explainable AI
+
+The application uses SHAP values to explain every prediction and identify the most influential customer features.
+
+![Customer Summary](images/Customer%20Summary.jpg)
 
 ## Project Structure
 
 ```text
-customer-churn-prediction/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── notebooks/
-├── src/
-├── models/
-├── api/
-├── app/
-├── tests/
-├── docs/
-├── images/
-│
-├── .gitignore
-├── requirements.txt
-└── README.md
+api/            FastAPI backend
+app/            Streamlit frontend
+models/         Trained XGBoost model
+notebooks/      EDA & model training
+images/         README screenshots
+```
+
+## Installation
+
+```bash
+git clone https://github.com/PRAJWAL2866/customer-churn-prediction.git
+cd customer-churn-prediction
+pip install -r requirements.txt
+```
+
+### Run FastAPI
+
+```bash
+cd api
+uvicorn main:app --reload
+```
+
+### Run Streamlit
+
+```bash
+cd app
+streamlit run app.py
+```
+
+## Author
+
+**Prajwal Phalke**
+
+MSc Data Science | Machine Learning | Explainable AI
