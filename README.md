@@ -2,7 +2,7 @@
 
 > End-to-end Explainable AI application for predicting telecom customer churn using XGBoost, SHAP, FastAPI, and Streamlit.
 
-![Dashboard](images/Dashboard.jpg)
+![Dashboard](./images/Dashboard.jpg)
 
 ## Live Demo
 Coming Soon
@@ -42,14 +42,13 @@ Churn Prediction
 
 ## Dashboard
 
-![Prediction](images/Prediction.jpg)
+![Prediction](./images/Prediction.jpg)
 
 ## Explainable AI
 
 The application uses SHAP values to explain every prediction and identify the most influential customer features.
 
-![Customer Summary](images/Customer%20Summary.jpg)
-## Project Structure
+![Customer Summary](./images/Customer%20Summary.jpg)## Project Structure
 
 ```text
 api/            FastAPI backend
