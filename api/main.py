@@ -19,3 +19,7 @@ def home():
 @app.post("/predict")
 def predict(data: CustomerData):
     return predict_churn(data.model_dump())
+
+@app.get("/routes")
+def routes():
+    return [route.path for route in app.routes]
