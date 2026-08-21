@@ -248,28 +248,28 @@ if predict_button:
     }
 
     try:
+        st.write("### 🔍 API Debug")
+        st.write("URL:", API_URL)
+
         response = requests.post(
-            API_URL,
-            json=payload,
-            timeout=30
-        )
+        API_URL,
+        json=payload,
+        timeout=30
+    )
+
+        st.write("Status Code:", response.status_code)
+        st.write("Raw Response:", response.text)
 
         response.raise_for_status()
-
         result = response.json()
 
     except requests.exceptions.ConnectionError:
-        st.error(
-            "❌ Could not connect to FastAPI. "
-            "Make sure the API server is running on port 8000."
-        )
+        st.error("❌ Could not connect to the Render FastAPI server.")
         st.stop()
 
     except requests.exceptions.RequestException as error:
-        st.error(
-            f"❌ API request failed: {error}"
-        )
-        st.stop()
+        st.error(f"❌ API request failed: {error}")
+    st.stop()
 
     probability = result["churn_probability"] * 100
     risk = result["risk_level"]
