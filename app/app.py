@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "https://customer-churn-api-ie3c.onrender.com/predict"
+API_URL = "https://customer-churn-api-917d.onrender.com/predict"
 st.set_page_config(
     page_title="Customer Churn Prediction",
     page_icon="📊",
@@ -255,12 +255,13 @@ if predict_button:
         API_URL,
         json=payload,
         timeout=30
-    )
+        )
 
         st.write("Status Code:", response.status_code)
         st.write("Raw Response:", response.text)
 
         response.raise_for_status()
+
         result = response.json()
 
     except requests.exceptions.ConnectionError:
@@ -269,7 +270,7 @@ if predict_button:
 
     except requests.exceptions.RequestException as error:
         st.error(f"❌ API request failed: {error}")
-    st.stop()
+        st.stop()
 
     probability = result["churn_probability"] * 100
     risk = result["risk_level"]
