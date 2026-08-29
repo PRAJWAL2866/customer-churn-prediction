@@ -1,11 +1,24 @@
 # 📊 Customer Churn Prediction
 
-> End-to-end Explainable AI application for predicting telecom customer churn using XGBoost, SHAP, FastAPI, and Streamlit.
+An end-to-end Explainable AI application that predicts telecom customer churn using **XGBoost**, **SHAP**, **FastAPI**, and **Streamlit**.
 
-![Dashboard](images/Dashboard.jpg)
+## 🚀 Live Demo
 
-## Live Demo
-Coming Soon
+- Frontend (Streamlit): YOUR_STREAMLIT_LINK
+- Backend API (Render): YOUR_RENDER_LINK/docs
+
+## Business Problem
+
+Telecom companies lose revenue when customers discontinue their subscriptions. This project predicts whether a customer is likely to churn and explains **why** using SHAP feature importance.
+
+## Features
+
+- Customer churn prediction with XGBoost
+- Explainable AI using SHAP
+- Interactive Streamlit dashboard
+- FastAPI REST API
+- Deployed on Render + Streamlit Cloud
+- Retention recommendations based on risk level
 
 ## Tech Stack
 
@@ -16,72 +29,33 @@ Coming Soon
 - SHAP
 - FastAPI
 - Streamlit
+- Render
 
-## Project Architecture
+## Project Structure
 
-Customer Data
-      ↓
-Streamlit Dashboard
-      ↓
-FastAPI REST API
-      ↓
-XGBoost Model
-      ↓
-SHAP Explainability
-      ↓
-Churn Prediction
+customer-churn-prediction/
+│
+├── api/                # FastAPI backend
+├── app/                # Streamlit frontend
+├── models/             # Trained model
+├── data/               # Dataset
+├── images/             # Screenshots
+├── notebooks/          # EDA & training
+├── requirements.txt
+└── README.md
 
-## Model Performance
+## Model Output
 
-| Metric | Score |
-|--------|------:|
-| ROC-AUC | **0.8458** |
-| Recall | **78.88%** |
-| Precision | **52.49%** |
-| F1 Score | **0.6303** |
-
-## Dashboard
-
-![Prediction](./images/Prediction.jpg)
-
-## Explainable AI
-
-The application uses SHAP values to explain every prediction and identify the most influential customer features.
-
-![Customer Summary](./images/CustomerSummary.jpg)## Project Structure
-
-```text
-api/            FastAPI backend
-app/            Streamlit frontend
-models/         Trained XGBoost model
-notebooks/      EDA & model training
-images/         README screenshots
-```
-
-## Installation
-
-```bash
-git clone https://github.com/PRAJWAL2866/customer-churn-prediction.git
-cd customer-churn-prediction
-pip install -r requirements.txt
-```
-
-### Run FastAPI
-
-```bash
-cd api
-uvicorn main:app --reload
-```
-
-### Run Streamlit
-
-```bash
-cd app
-streamlit run app.py
-```
+- Churn probability
+- Risk level (Low / Medium / High)
+- SHAP explanation
+- Top 5 influential features
+- Customer retention recommendation
 
 ## Author
 
 **Prajwal Phalke**
 
-MSc Data Science | Machine Learning | Explainable AI
+M.Sc. Data Science | Germany
+
+LinkedIn: (add later)
